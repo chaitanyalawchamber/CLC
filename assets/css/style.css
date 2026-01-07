@@ -47,3 +47,29 @@ body{font-family:'Bookman Old Style', serif; background:var(--bg); color:#111; m
 
 /* responsive */
 @media (max-width:820px){.nav{display:none}.hero{padding:20px 12px}.controls{gap:6px}.brand-text{display:none}}
+
+/* Header cleanup */
+.brand-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Hero advocate styling */
+.hero .adv-name {
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.hero .adv-role {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Mobile safety */
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 18px;
+  }
+}
