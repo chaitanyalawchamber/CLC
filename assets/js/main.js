@@ -37,15 +37,35 @@
     const title = document.querySelector('.brand-title');
 
     if(header && logo && title){
+      // Recommended values
+      const threshold = 20;             // scroll start (px)
+      const logoDesktop = { full: 180, shrink: 120 };  // logo height px
+      const titleDesktop = { full: 20, shrink: 16 };   // font-size px
+
+      const logoMobile = { full: 70, shrink: 50 };     // mobile logo height px
+      const titleMobile = { full: 18, shrink: 14 };    // mobile font size px
+
       window.addEventListener('scroll', function() {
-        if(window.scrollY > 20){ // scroll threshold
+        const isMobile = window.innerWidth <= 768;
+
+        if(window.scrollY > threshold){
           header.classList.add('sticky-shrink');
-          logo.style.height = '120px';   // logo shrink on scroll
-          title.style.fontSize = '16px'; // title shrink on scroll
+          if(isMobile){
+            logo.style.height = logoMobile.shrink + 'px';
+            title.style.fontSize = titleMobile.shrink + 'px';
+          }else{
+            logo.style.height = logoDesktop.shrink + 'px';
+            title.style.fontSize = titleDesktop.shrink + 'px';
+          }
         } else {
           header.classList.remove('sticky-shrink');
-          logo.style.height = '180px';   // restore logo
-          title.style.fontSize = '20px'; // restore title
+          if(isMobile){
+            logo.style.height = logoMobile.full + 'px';
+            title.style.fontSize = titleMobile.full + 'px';
+          }else{
+            logo.style.height = logoDesktop.full + 'px';
+            title.style.fontSize = titleDesktop.full + 'px';
+          }
         }
       });
     }
