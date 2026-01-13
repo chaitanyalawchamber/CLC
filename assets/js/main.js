@@ -38,13 +38,11 @@
 
     if(header && logo && title){
       // Recommended values
-      const threshold = 20;             // scroll start (px)
-      const logoDesktop = { full: 180, shrink: 120 };  // logo height px
-      const titleDesktop = { full: 20, shrink: 16 };   // font-size px
-
-      const logoMobile = { full: 70, shrink: 50 };     // mobile logo height px
-      const titleMobile = { full: 18, shrink: 14 };    // mobile font size px
-
+      const threshold = 20;       // scroll start
+      const logoDesktop = { full: 180, shrink: 120 };
+      const titleDesktop = { full: 20, shrink: 16 };
+      const logoMobile = { full: 70, shrink: 50 };
+      const titleMobile = { full: 18, shrink: 14 };
       window.addEventListener('scroll', function() {
         const isMobile = window.innerWidth <= 768;
 
