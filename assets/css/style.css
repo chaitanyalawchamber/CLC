@@ -49,10 +49,10 @@ body{
   width:auto;                /* natural width */
   object-fit:contain !important; /* ensures full logo visible */
   border-radius:0 !important; /* remove square rounding */
-  max-width:100%;            /* prevent overflow */
+  max-width:none;            /* prevent overflow */
   display:block;
   border:none;
-  box-shadow:0 2px 6px rgba(0,0,0,0.08); /* subtle shadow for polish */
+  box-shadow:none; /* subtle shadow for polish */
 }
 
 /* Brand text */
