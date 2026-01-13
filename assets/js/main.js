@@ -38,32 +38,42 @@
 
     if(header && logo && title){
       // Recommended values
-      const threshold = 20;       // scroll start
-      const logoDesktop = { full: 180, shrink: 120 };
-      const titleDesktop = { full: 20, shrink: 16 };
-      const logoMobile = { full: 70, shrink: 50 };
-      const titleMobile = { full: 18, shrink: 14 };
+      const threshold = 20;             // scroll start (px)
+      const logoDesktop = { full: 180, shrink: 120 };  // logo height px
+      const titleDesktop = { full: 20, shrink: 16 };   // font-size px
+      const logoMobile = { full: 70, shrink: 50 };     // mobile logo height px
+      const titleMobile = { full: 18, shrink: 14 };    // mobile font size px
+
       window.addEventListener('scroll', function() {
         const isMobile = window.innerWidth <= 768;
+        let newLogoHeight, newTitleSize;
 
         if(window.scrollY > threshold){
           header.classList.add('sticky-shrink');
           if(isMobile){
-            logo.style.height = logoMobile.shrink + 'px';
-            title.style.fontSize = titleMobile.shrink + 'px';
+            newLogoHeight = logoMobile.shrink;
+            newTitleSize = titleMobile.shrink;
           }else{
-            logo.style.height = logoDesktop.shrink + 'px';
-            title.style.fontSize = titleDesktop.shrink + 'px';
+            newLogoHeight = logoDesktop.shrink;
+            newTitleSize = titleDesktop.shrink;
           }
         } else {
           header.classList.remove('sticky-shrink');
           if(isMobile){
-            logo.style.height = logoMobile.full + 'px';
-            title.style.fontSize = titleMobile.full + 'px';
+            newLogoHeight = logoMobile.full;
+            newTitleSize = titleMobile.full;
           }else{
-            logo.style.height = logoDesktop.full + 'px';
-            title.style.fontSize = titleDesktop.full + 'px';
+            newLogoHeight = logoDesktop.full;
+            newTitleSize = titleDesktop.full;
           }
+        }
+
+        // ✅ Only update if value changed (fix mobile glitch)
+        if(parseInt(logo.style.height) !== newLogoHeight){
+          logo.style.height = newLogoHeight + 'px';
+        }
+        if(parseInt(title.style.fontSize) !== newTitleSize){
+          title.style.fontSize = newTitleSize + 'px';
         }
       });
     }
@@ -72,3 +82,4 @@
 
 // ================= Appointment Loader Stub =================
 function initAppointmentLoader(iframeId, overlayId){ /* no loader in this build */ }
+
