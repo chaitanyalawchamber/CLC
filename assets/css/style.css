@@ -10,13 +10,51 @@
 html,body{height:100%}
 body{font-family:'Bookman Old Style', serif; background:var(--bg); color:#111; margin:0; font-size:16px; line-height:1.6}
 .container{max-width:1000px;margin:0 auto;padding:20px}
-.site-header{background:var(--lightblue);color:white;padding:14px 0;position:sticky;top:0;z-index:20}
-.header-inner{display:flex;align-items:center;gap:16px}
-.brand-wrap{display:flex;align-items:center;gap:12px}
-.site-logo{width:72px;height:72px;border-radius:8px;object-fit:cover;border:3px solid rgba(255,255,255,0.12)}
-.brand-text{line-height:1}
-.brand-title{font-weight:800;font-size:1.05rem;color:white}
-.brand-tag{font-size:0.85rem;color:rgba(255,255,255,0.95)}
+
+/* ============== Header ============== */
+.site-header{
+  background:var(--lightblue);
+  color:white;
+  padding:14px 20px;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.brand-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.site-logo{
+  height:90px;             /* fixed height */
+  width:auto;              /* keep original width */
+  object-fit:contain;      /* show full logo without cropping */
+  border-radius:0;         /* no rounding */
+  border:none;             /* remove border if not needed */
+}
+
+.brand-text{
+  line-height:1;
+}
+
+.brand-title{
+  font-size:20px;
+  font-weight:600;
+  line-height:1.2;
+}
+
+.brand-tag{
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.95);
+}
 
 /* Nav */
 .nav{margin-left:16px;display:flex;gap:12px}
@@ -28,12 +66,28 @@ body{font-family:'Bookman Old Style', serif; background:var(--bg); color:#111; m
 .icon-btn{background:transparent;border:1px solid rgba(255,255,255,0.18);color:white;padding:6px 8px;border-radius:8px;cursor:pointer;font-weight:700}
 .icon-btn.small{padding:4px 6px;font-size:0.95rem}
 
-/* Hero */
-.hero{padding:40px 20px;text-align:left;background:linear-gradient(180deg,rgba(63,169,245,0.12),rgba(63,169,245,0.06));border-radius:10px;margin:12px 0}
-.hero h1{font-size:2rem;margin:0 0 6px 0;color:#073763}
+/* ============== Hero ============== */
+.hero{
+  padding:40px 20px;
+  text-align:left;
+  background:linear-gradient(180deg,rgba(63,169,245,0.12),rgba(63,169,245,0.06));
+  border-radius:10px;
+  margin:12px 0;
+}
+
+.hero h1{
+  font-size:2rem;
+  margin:0 0 6px 0;
+  color:#073763;
+}
+
 .lead{color:var(--muted);margin:0 0 12px 0}
 .quote{font-style:italic;color:var(--lightblue);margin:12px 0;font-weight:700}
 .cta .btn{background:var(--royal);color:white;border-radius:8px;padding:10px 16px;border:none;cursor:pointer;text-decoration:none}
+
+/* Hero advocate styling */
+.hero .adv-name{margin-top:8px;font-weight:500}
+.hero .adv-role{margin-top:2px;color:var(--muted);font-size:0.95rem}
 
 /* Cards/footer/etc */
 .overview{margin-top:20px;padding:16px;background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.04)}
@@ -45,36 +99,18 @@ body{font-family:'Bookman Old Style', serif; background:var(--bg); color:#111; m
 .appointment-wrapper{padding:18px;background:var(--card);border-radius:12px;box-shadow:0 8px 18px rgba(16,24,40,0.04);margin-bottom:18px}
 .map-wrapper{margin-top:18px;border-radius:10px;overflow:hidden;border:1px solid rgba(16,24,40,0.04)}
 
-/* responsive */
-@media (max-width:820px){.nav{display:none}.hero{padding:20px 12px}.controls{gap:6px}.brand-text{display:none}}
-
-/* Header cleanup */
-.brand-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2;
+/* ============== Responsive ============== */
+@media (max-width:820px){
+  .nav{display:none}
+  .hero{padding:20px 12px}
+  .controls{gap:6px}
+  .brand-text{display:none}
 }
 
-/* Hero advocate styling */
-.hero .adv-name {
-  margin-top: 8px;
-  font-weight: 500;
-}
-
-.hero .adv-role {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* Mobile safety */
-@media (max-width: 768px) {
-  .brand-title {
-    font-size: 18px;
+@media (max-width:768px){
+  .brand-title{font-size:18px}
+  .site-logo{
+    height:70px;  /* smaller logo on mobile */
+    width:auto;
   }
 }
-.site-logo {
-  height: 90px;
-  width: auto;
-}
-
