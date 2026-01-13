@@ -45,7 +45,7 @@ body{
 
 /* ================= Logo ================= */
 .site-logo{
-  height:1800px;               /* fixed height */
+  height:320px;               /* fixed height */
   width:auto;                /* natural width */
   object-fit:contain !important; /* ensures full logo visible */
   border-radius:0 !important; /* remove square rounding */
