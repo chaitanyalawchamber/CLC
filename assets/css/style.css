@@ -24,7 +24,7 @@ body{
 .site-header{
   background:var(--lightblue);
   color:white;
-  padding:14px 20px;
+  padding:8px 20px;
   position:sticky;
   top:0;
   z-index:20;
@@ -40,7 +40,7 @@ body{
 .brand-wrap{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:6px;
 }
 
 /* ================= Logo ================= */
