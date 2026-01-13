@@ -73,3 +73,8 @@ body{font-family:'Bookman Old Style', serif; background:var(--bg); color:#111; m
     font-size: 18px;
   }
 }
+.site-logo {
+  height: 90px;
+  width: auto;
+}
+
