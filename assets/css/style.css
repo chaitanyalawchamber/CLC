@@ -234,6 +234,62 @@ body{
   }
 }
 /* ================= Optional Smooth Shrink Transitions ================= */
+/* ================= Team Page Specific ================= */
+.profile h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+  color: var(--royal);
+}
+
+.profile h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  font-size: 1.3rem;
+  color: var(--lightblue);
+}
+
+.profile h4 {
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-size: 1.1rem;
+  font-weight:600;
+  color: #111;
+}
+
+/* Lists alignment */
+.profile ul {
+  margin-left: 1.5em; /* consistent indent for all lists */
+  list-style-type: disc;
+}
+
+.profile ul li {
+  line-height: 1.5em;
+  margin-bottom: 0.3em;
+}
+
+/* Optional: make nested lists slightly smaller */
+.profile ul ul {
+  margin-left: 1.2em;
+  list-style-type: circle;
+}
+
+/* Back button styling */
+.profile .back-btn {
+  display:inline-block;
+  margin-top:2em;
+  padding:8px 12px;
+  background:var(--royal);
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  transition:background 0.2s;
+}
+
+.profile .back-btn:hover {
+  background:#005bb5;
+}
+
 .site-header,
 .site-logo,
 .brand-title{
