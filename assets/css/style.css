@@ -234,6 +234,11 @@ body{
   }
 }
 /* ================= Optional Smooth Shrink Transitions ================= */
+.site-header,
+.site-logo,
+.brand-title{
+  transition: all 0.3s ease;
+}
 /* ================= Team Page Specific ================= */
 .profile h2 {
   margin-top: 2em;
@@ -289,10 +294,3 @@ body{
 .profile .back-btn:hover {
   background:#005bb5;
 }
-
-.site-header,
-.site-logo,
-.brand-title{
-  transition: all 0.3s ease;
-}
-
