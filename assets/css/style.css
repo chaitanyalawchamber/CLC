@@ -239,19 +239,20 @@ body{
 .brand-title{
   transition: all 0.3s ease;
 }
-/* ================= Team Page Specific ================= */
+/* ================= Team Page ================= */
 .profile h2 {
   margin-top: 2em;
   margin-bottom: 1em;
   font-size: 1.6rem;
-  color: var(--royal);
+  color: #111; /* black for main section headings */
 }
 
 .profile h3 {
   margin-top: 1.5em;
   margin-bottom: 0.6em;
   font-size: 1.3rem;
-  color: var(--lightblue);
+  font-weight:600;
+  color: #111; /* black for all subsection headings */
 }
 
 .profile h4 {
@@ -259,12 +260,12 @@ body{
   margin-bottom: 0.4em;
   font-size: 1.1rem;
   font-weight:600;
-  color: #111;
+  color: #111; /* black for sub-sub headings */
 }
 
 /* Lists alignment */
 .profile ul {
-  margin-left: 1.5em; /* consistent indent for all lists */
+  margin-left: 1.5em; 
   list-style-type: disc;
 }
 
@@ -273,7 +274,7 @@ body{
   margin-bottom: 0.3em;
 }
 
-/* Optional: make nested lists slightly smaller */
+/* Nested lists slightly smaller */
 .profile ul ul {
   margin-left: 1.2em;
   list-style-type: circle;
